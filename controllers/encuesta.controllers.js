@@ -5,6 +5,11 @@ const postearRespuesta = async (req, res) => {
 	const encuesta = new Encuesta({ nota, comentario });
 	await encuesta.save();
 	res.json(encuesta);
+
+	const { token } = req.params;
+	if (!token) {
+		//Usuario no autorizado para acceder al panel de administracion
+	}
 };
 
 const mostrarEncuestas = async (req, res) => {
