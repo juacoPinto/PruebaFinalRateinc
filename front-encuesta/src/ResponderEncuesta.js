@@ -23,9 +23,9 @@ const ResponderEncuesta = () => {
 				En una escala de 1 a 10: ¿Qué le pareció el proceso de selección de
 				Rateinc?
 			</h3>
-			<div className="container">
+			<div className="container d-flex ">
 				<form onSubmit={handleSubmit}>
-					<label>Nota que le pondria: </label>
+					<label className="form-label">Nota que le pondria: </label>
 					<input
 						value={nota}
 						type="text"
@@ -33,7 +33,7 @@ const ResponderEncuesta = () => {
 						onChange={(e) => setNota(e.target.value)}
 					></input>
 					<br />
-					<label>Comentario</label>
+					<label className="form-label">Comentario</label>
 					<input
 						value={comentario}
 						type="text"
